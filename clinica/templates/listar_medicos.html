@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de médicos</title>
+</head>
+<body>
+    <h1>Lista de médicos</h1>
+    <a href="{% url 'criar_consulta' %}">Criar uma nova consulta</a>
+    <ul>
+        {% for i in medico %}
+            <li>
+                {{i.nome}} - {{i.especialidade}}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
